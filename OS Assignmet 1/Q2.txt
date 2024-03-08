@@ -1,0 +1,182 @@
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment$ mkdir Q2
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment$ cd Q2
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ touch data.txt
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ cat > data.txt
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsumnikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ rmdir data.txt
+rmdir: failed to remove 'data.txt': Not a directory
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ l
+data.txt
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ pwd
+/home/nikhil/LinuxAssignment/Q2
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ cd ../
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment$ cd Q2
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ cat > data.txt
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsumnikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ vi data.txt
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ cat data.txt
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+ Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+ when an unknown printer took a galley of type and scrambled
+ it to make a type specimen book.
+ It has survived not only five centuries,
+ but also the leap into electronic typesetting,
+ remaining essentially unchanged.
+ It was popularised in the 1960s
+ with the release of Letraset sheets containing Lorem Ipsum passages,
+ and more recently with desktop publishing software
+ like Aldus PageMaker including versions of Lorem Ipsum
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ head -20 data.txt
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+ Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+ when an unknown printer took a galley of type and scrambled
+ it to make a type specimen book.
+ It has survived not only five centuries,
+ but also the leap into electronic typesetting,
+ remaining essentially unchanged.
+ It was popularised in the 1960s
+ with the release of Letraset sheets containing Lorem Ipsum passages,
+ and more recently with desktop publishing software
+ like Aldus PageMaker including versions of Lorem Ipsum
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ head data.txt
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+ Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+ when an unknown printer took a galley of type and scrambled
+ it to make a type specimen book.
+ It has survived not only five centuries,
+ but also the leap into electronic typesetting,
+ remaining essentially unchanged.
+ It was popularised in the 1960s
+ with the release of Letraset sheets containing Lorem Ipsum passages,
+ and more recently with desktop publishing software
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ vi data.txt
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ head data.txt
+1a
+2b
+3c
+4d
+5e
+6f
+7g
+8h
+9i
+10j
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ tail -5 data.txt
+9i
+10j
+11k
+12l
+13m
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ touch numbers.txt
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ cat > numbers.txt
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ head -15 numbers.txt
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ tail -3 numbers.txt
+16
+17
+18nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ touch input.txt
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ cat > input.txt
+hello mumbainikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ cat input.txt | tr [:lower] [:upper]
+heuup mumbainikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ cat input.txt
+hello mumbainikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ cat input.txt | tr [:lower:] [:upper:]
+HELLO MUMBAInikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ tree
+.
+├── data.txt
+├── input.txt
+└── numbers.txt
+
+0 directories, 3 files
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ tr 'a-z' 'A-Z' <input.txt> output.txt
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ cat output.txt
+HELLO MUMBAInikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ ls
+data.txt  input.txt  numbers.txt  output.txt
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ touch duplicate.txt
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ cat > d
+data.txt       duplicate.txt
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ cat > duplicate.txt
+aa
+bb
+bb
+cc
+cc
+dd
+dd
+dd
+ee
+ee
+ffnikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ uniq duplicate.txt
+aa
+bb
+cc
+dd
+ee
+ff
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ -uniq duplicate.txt
+Command '-uniq' not found, did you mean:
+  command 'uniq' from deb coreutils (8.32-4.1ubuntu1)
+Try: sudo apt install <deb name>
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ uniq -u duplicate.txt
+aa
+ff
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ cat > fruit.txt
+Apple
+Apple
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ cat >> fruit.txt
+banana
+banana
+grapes
+mango
+kiwi
+kiwinikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ cat fruit.txt
+Apple
+Apple
+banana
+banana
+grapes
+mango
+kiwi
+kiwinikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ uniq fruit.txt
+Apple
+banana
+grapes
+mango
+kiwi
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ uniq -u fruit.txt
+grapes
+mango
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$ uniq -c fruit.txt
+      2 Apple
+      2 banana
+      1 grapes
+      1 mango
+      2 kiwi
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/Q2$
