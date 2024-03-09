@@ -1,0 +1,24 @@
+1. echo "Hello,World!" :- Prints "Hello,World!" to the console.
+2. name="Productive" :- Assigns the value "Productive" to the variable name.
+3. touch file.txt :- Creates an empty file name "file.txt".
+4. ls -a :- Lists all files, including hidden ones, in the current directory.
+5. rm file.txt :- Removes (deletes) the file "file.txt".
+6. cp file1.txt file2.txt :- Copies "file1.txt" to "file2.txt".
+7. mv file.txt /path/to/directory/ :- Moves "file.txt" to the specified directory.
+8. chmod 755 script.sh :- Changes the permissions of "script.sh" to allow execution.
+9. grep "pattern" file.txt :- Searches for "pattern" in the content of "file.txt".
+10. kill PID :- Sends a signal to terminate the process with the specified process ID (PID).
+11. mkdir mydir && cd mydir && touch file.txt && echo "Hello, World!" > file.txt && cat file.txt 
+:- Creates a directory, enters it, creates a file, writes "Hello, World!" to the file, and then displays the file content.
+12. ls -l | grep ".txt" :- Lists only .txt file in the current directory.
+13. cat file1.txt file2.txt | sort | uniq :- Concatenates the content of "file1.txt" and "file2.txt," sorts it, and removes duplicate lines.
+14. ls -l | grep "^d" :- Lists only directories in the current directory.
+15. grep -r "pattern" /path/to/directory/ :- Recursively searches for "pattern" in files within the specified directory.
+16. cat file1.txt file2.txt | sort | uniq –d :- Displays only the duplicate lines common to both files.
+17. chmod 644 file.txt :- Sets read and write permissions for the owner and read-only permissions for others on "file.txt".
+18. cp -r source_directory destination_directory :- Copies the contents of the source directory and its subdirectories to the specified destination directory. 
+The -r flag stands for "recursive," allowing the copying of directories and their contents. 
+19. find /path/to/search -name "*.txt" :- Searches for files with the extension ".txt" within the specified path (and its subdirectories). 
+This command uses the find tool to locate files based on criteria, in this case, files with names ending in ".txt".
+20. chmod u+x file.txt :- Grants execute permission to the file owner.
+21. echo $PATH :- Prints the value of the PATH environment variable.

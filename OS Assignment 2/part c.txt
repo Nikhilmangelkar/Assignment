@@ -1,0 +1,166 @@
+1.nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/assignment2$ cat q1.sh
+#!/bin/sh
+echo "Hello,World!"
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/assignment2$ ./q1
+-bash: ./q1: No such file or directory
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/assignment2$ ./q1.sh
+Hello,World!
+2.nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/assignment2$ cat q2.sh
+#!/bin/sh
+name="CDAC Mumbai"
+echo $name
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/assignment2$ ./q2.sh
+CDAC Mumbai
+3.nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/assignment2$ cat q3.sh
+#!/bin/sh
+echo "enter num:"
+read num
+echo $num
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/assignment2$ ./q3.sh
+enter num:
+5
+5
+4.nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/assignment2$ cat q4.sh
+#!/bin/sh
+echo "enter number1:"
+read n1
+echo "enter number2:"
+read n2
+sum=$(($n1+$n2))
+echo $sum
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/assignment2$ ./q4.sh
+enter number1:
+5
+enter number2:
+3
+8
+5.nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/assignment2$ cat q5.sh
+#!/bin/sh
+echo "Enter Any Number "
+read number
+if [ $((number % 2)) -eq 0 ];
+then
+        echo "Number Is Even"
+else
+        echo "Number Is Odd"
+fi
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/assignment2$ ./q5.sh
+Enter Any Number
+8
+Number Is Even
+6.nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/assignment2$ cat q6.sh
+#!/bin/bash
+
+for(( i=1; i<=5; i++ ))
+do
+        echo $i
+done
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/assignment2$ ./q6.sh
+1
+2
+3
+4
+5
+7.nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/assignment2$ cat q7.sh
+#!/bin/bash
+x=1
+while [[ $x -le 5 ]];
+do
+        echo $x
+        ((x++))
+done
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/assignment2$ ./q7.sh
+1
+2
+3
+4
+5
+8.nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/assignment2$ cat q8.sh
+#!/bin/bash
+file="q10.sh"
+if [[ -e "$file" ]]
+then
+        echo "file exist"
+else
+        echo "file doesnt exist"
+fi
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/assignment2$ ./q8.sh
+file exist
+9.nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/assignment2$ cat q9.sh
+#!/bin/bash
+echo "enter the number:"
+read number
+if [[ $number -gt 10 ]]
+then
+        echo "number is greater then 10"
+else
+        echo "number is less then 10"
+fi
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/assignment2$ ./q9.sh
+enter the number:
+8
+number is less then 10
+10.nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/assignment2$ cat q10.sh
+#!/bin/bash
+for i in {1..5}
+do
+        for j in {1..5}
+        do
+                result=$((i * j))
+                echo  "$result"
+        done
+        echo
+done
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/assignment2$ ./q10.sh
+1
+2
+3
+4
+5
+
+2
+4
+6
+8
+10
+
+3
+6
+9
+12
+15
+
+4
+8
+12
+16
+20
+
+5
+10
+15
+20
+25
+
+11.nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/assignment2$ cat q11.sh
+#!/bin/bash
+echo "enter the number (negative number to exit):"
+echo "enter the number:"
+read number
+while true;
+do
+        if [[ $number -lt 0 ]]
+        then
+                echo "exiting since negative"
+                break
+        fi
+        sq=$((number*number))
+        echo "square of the number is: $sq"
+        break
+done
+
+nikhil@LAPTOP-AOFANRR9:~/LinuxAssignment/assignment2$ ./q11.sh
+enter the number (negative number to exit):
+enter the number:
+8
+square of the number is: 64
