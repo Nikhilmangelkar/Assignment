@@ -1,0 +1,183 @@
+Q1.
+import java.util.*;
+public class Program1 { 
+
+ static int findGCD(int a, int b) { 
+if (b == 0) { 
+return a; 
+} else { 
+return findGCD(b, a % b);
+}
+
+}
+public static void main(String[] args) { 
+Scanner sc = new Scanner (System.in); 
+System.out.print("Enter the first number  :  "); 
+int number1 = sc.nextInt(); 
+System.out.print("Enter the second number  :  "); 
+int number2 = sc.nextInt(); 
+int gcd = findGCD(number1, number2); 
+System.out.println("The GCD of " + number1 + " and " + number2 + " is: " + gcd); 
+} 
+} 
+
+output:
+
+PS D:\CDAC\ADS Module\HW> javac Program1.java
+PS D:\CDAC\ADS Module\HW> java Program1
+Enter the first number  :  10
+Enter the second number  :  24
+The GCD of 10 and 24 is: 2
+************************************************************************
+Q2.
+import java.util.*;
+public class Program2{ 
+public static int findLCM(int a, int b) { 
+return (a * b) / findGCD(a, b); 
+} 
+public static int findGCD(int a, int b) { 
+if (b == 0) { 
+return a; 
+} else { 
+return findGCD(b, a % b); 
+} 
+} 
+
+public static void main(String[] args) { 
+Scanner sc = new Scanner (System.in); 
+System.out.print("Enter the first number  :  "); 
+int number1 = sc.nextInt(); 
+System.out.print("Enter the second number  :  "); 
+int number2 = sc.nextInt(); 
+int lcm = findLCM(number1, number2); 
+System.out.println("The LCM of " + number1 + " and " + number2 
++ " is: " + lcm); 
+} 
+}
+
+output:
+
+PS D:\CDAC\ADS Module\HW> javac Program2.java
+PS D:\CDAC\ADS Module\HW> java Program2
+Enter the first number  :  5
+Enter the second number  :  10
+The LCM of 5 and 10 is: 10
+**********************************************************
+Q3.
+
+import java.util.*;
+public class Program3 { 
+public static void printPrimeFactors(int n) { 
+ 
+  while (n % 2 == 0) { 
+   System.out.print(2 + " "); 
+   n /= 2; 
+  } 
+ 
+  for (int i = 3; i <= Math.sqrt(n); i += 2) { 
+ 
+   while (n % i == 0) { 
+    System.out.print(i + " "); 
+    n /= i; 
+   } 
+  } 
+ 
+  if (n > 2) { 
+   System.out.print(n); 
+  } 
+ } 
+ public static void main(String[] args) { 
+  Scanner sc = new Scanner (System.in); 
+  System.out.print("Enter the  number  :  "); 
+  int number = sc.nextInt(); 
+  System.out.print("Prime factors of " + number + " are: "); 
+  printPrimeFactors(number); 
+ } 
+} 
+
+
+output:
+
+PS D:\CDAC\ADS Module\HW> javac Program3.java
+PS D:\CDAC\ADS Module\HW> java Program3
+Enter the  number  :  5
+Prime factors of 5 are: 5
+********************************************************************************
+Q4.
+
+import java.util.*;
+public class Program4 { 
+public static boolean isPalindrome(int number) { 
+  int originalNumber = number; 
+  int reverse = 0; 
+ 
+  while (number != 0) { 
+   int lastDigit = number % 10; 
+   reverse = reverse * 10 + lastDigit; 
+   number /= 10; 
+  } 
+ 
+  return originalNumber == reverse; 
+ } 
+ public static void main(String[] args) { 
+  Scanner sc = new Scanner (System.in); 
+  System.out.print("Enter the  number  :  "); 
+  int number = sc.nextInt(); 
+  if (isPalindrome(number)) { 
+   System.out.println(number + " is a palindrome."); 
+  } else { 
+   System.out.println(number + " is not a palindrome."); 
+  } 
+ } 
+} 
+ 
+output:
+
+PS D:\CDAC\ADS Module\HW> javac Program4.java
+PS D:\CDAC\ADS Module\HW> java Program4
+Enter the  number  :  2662
+2662 is a palindrome.
+PS D:\CDAC\ADS Module\HW> javac Program4.java
+PS D:\CDAC\ADS Module\HW> java Program4
+Enter the  number  :  85556
+85556 is not a palindrome.
+***************************************************************
+
+Q5.
+import java.util.*;
+public class Program5 { 
+public static boolean isPrime(int n) { 
+if (n < 2) { 
+return false; 
+} 
+for (int i = 2; i <= Math.sqrt(n); i++) { 
+if (n % i == 0) { 
+return false; 
+} 
+} 
+return true; 
+} 
+
+public static void main(String[] args) { 
+Scanner sc = new Scanner(System.in); 
+System.out.print("Enter the  number  :  "); 
+int number = sc.nextInt(); 
+if (isPrime(number)) { 
+System.out.println(number + " is a prime number."); 
+} else { 
+System.out.println(number + " is not a prime number."); 
+} 
+} 
+}
+
+output:
+
+
+PS D:\CDAC\ADS Module\HW> javac Program5.java
+PS D:\CDAC\ADS Module\HW> java Program5
+Enter the  number  :  21
+21 is not a prime number.
+PS D:\CDAC\ADS Module\HW> javac Program5.java
+PS D:\CDAC\ADS Module\HW> java Program5
+Enter the  number  :  23
+23 is a prime number.
